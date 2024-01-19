@@ -6,4 +6,8 @@ export default createBoard({
     name: 'Label',
     Board: () => <Label> My Label </Label>,
     isSnippet: true,
+    environmentProps: {
+        canvasWidth: 215,
+        canvasHeight: 46,
+    },
 });

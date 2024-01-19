@@ -1,51 +1,86 @@
 .App {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
 }
 
 .logo {
-  padding: 1.25em;
-  will-change: filter;
-  transition: filter 300ms;
+    padding: 1.25em;
+    will-change: filter;
+    transition: filter 300ms;
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+    filter: drop-shadow(0 0 2em #646cffaa);
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+    filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
 .logo.ts:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
+    filter: drop-shadow(0 0 2em #3178c6aa);
 }
 
 .logo.scss:hover {
-  filter: drop-shadow(0 0 2em #cc6698aa);
+    filter: drop-shadow(0 0 2em #cc6698aa);
 }
 
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
 }
 
 .card {
-  padding: 2em;
+    padding: 2em;
 }
 
 .read-the-docs {
-  color: #888;
+    color: #888;
+}
+
+.title {
+    font-size: 2.5em;
+    display: block;
+    min-width: 300px;
+    width: 100%;
+}
+
+.description {
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    direction: ltr;
+    position: static;
+    min-width: 300px;
+}
+
+.note {
+    color: #B3B3B3;
+    min-width: 250px;
+}
+
+.form {
+    border: 0px solid currentcolor;
+    border-image: 50% 50%/ 2px 100% linear-gradient(180deg, #000000 0%, rgba(255, 255, 255, 0) 100%) 1 / 2px stretch;
+    border-radius: .6em;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 8px #9F9F9F;
+    text-align: center;
+    align-self: center;
+    position: relative;
+    width: 300px;
+    display: inline-block;
 }

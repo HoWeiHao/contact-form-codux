@@ -55,12 +55,18 @@ button:focus-visible {
 }
 
 .label {
-    width: 100%;
     font-size: 0.8em;
     font-weight: 700;
     margin-bottom: 0.5em;
     direction: ltr;
     text-align: start;
-    position: static;
     display: block;
+    right: auto;
+    left: auto;
+    position: static;
+    margin-top: 0.5em;
+    margin-right: 0em;
+    margin-left: 20%;
+    padding: 0px 0px 0px 0em;
+    width: 100%;
 }
