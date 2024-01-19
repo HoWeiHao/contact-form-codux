@@ -3,7 +3,7 @@ import styles from './submit-button.module.scss';
 
 export interface SubmitButtonProps {
     className?: string;
-    children?: JSX.Element | Array<JSX.Element|string> | string;
+    children?: JSX.Element | Array<JSX.Element | string> | string;
 }
 
 /**
@@ -13,7 +13,7 @@ export interface SubmitButtonProps {
 export const SubmitButton = ({ className, children }: SubmitButtonProps) => {
     return (
         <div className={' ${styles.root} ${className} '}>
-            <button>{ children }</button>
+            <button className={styles.button}>{children}</button>
         </div>
     );
 };

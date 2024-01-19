@@ -1,3 +1,4 @@
+import '../../../index.css';
 import { createBoard } from '@wixc3/react-board';
 import { Label } from '../../../components/label/label';
 
