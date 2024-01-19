@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import styles from './submit-button.module.scss';
+import { RiSendPlaneFill } from 'react-icons/ri';
 
 export interface SubmitButtonProps {
     className?: string;
@@ -13,7 +14,10 @@ export interface SubmitButtonProps {
 export const SubmitButton = ({ className, children }: SubmitButtonProps) => {
     return (
         <div className={' ${styles.root} ${className} '}>
-            <button className={styles.button}>{children}</button>
+            <button className={styles.button}>
+                <RiSendPlaneFill className={styles.iconSend} />
+                {children}
+            </button>
         </div>
     );
 };

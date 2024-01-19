@@ -8,6 +8,23 @@ import { FormRow } from './components/form-row/form-row';
 function App() {
     const [count, setCount] = useState(0);
 
+    function onFormSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+        e.preventDefault();
+
+        const formData: Record<string, string> = {};
+
+        function isInputNamedElement(e: Element): e is HTMLInputElement & { name: string } {
+            return 'value' in e && 'name' in e;
+        }
+
+        Array.from(e.currentTarget.elements).filter(isInputNamedElement).forEach((field) => {
+            if (!field.name) return;
+            formData[field.name] = field.value;
+        });
+
+        console.log('formData', formData);
+    }
+
     return (
         <div className={styles.App}>
             <h1 className={styles.title}>Contact Us</h1>
@@ -16,7 +33,7 @@ function App() {
                 we can.{' '}
             </p>
             <p className={styles.note}>All fields are required.</p>
-            <form className={styles.form}>
+            <form onSubmit={onFormSubmit} className={styles.form}>
                 <FormRow>
                     <Label htmlFor={'name'}>Name </Label>
                     <Input id={'name'} name={'name'} />
