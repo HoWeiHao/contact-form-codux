@@ -70,3 +70,7 @@ button:focus-visible {
     padding: 0px 0px 0px 0em;
     width: 100%;
 }
+
+*{
+    box-sizing: border;
+}
