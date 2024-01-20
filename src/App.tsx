@@ -8,7 +8,7 @@ import { FormRow } from './components/form-row/form-row';
 function App() {
     const [count, setCount] = useState(0);
 
-    function onFormSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+    async function onFormSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
         e.preventDefault();
 
         const formData: Record<string, string> = {};
@@ -22,7 +22,11 @@ function App() {
             formData[field.name] = field.value;
         });
 
-        console.log('formData', formData);
+        await fetch('/.netlify/functions/mail', {
+            method:'POST',
+            body: JSON.stringify(formData)
+        })
+
     }
 
     return (
